@@ -440,6 +440,8 @@ Citizen.CreateThread(function()
                     sentado = true
                     TaskStartScenarioAtPosition(PlayerPedId(), GetHashKey("PROP_PLAYER_BARBER_SEAT"), sentar, 0, true, 0)
                     Citizen.Wait(5000)
+		    Citizen.InvokeNative(0xD710A5007C2AC539, PlayerPedId(), tonumber(0x9925C067), 0)
+                    Citizen.InvokeNative(0xCC8CA3E88256E58F, PlayerPedId(), 0, 1, 1, 1, 0)
                     cabeleireiro()
                 end
             end
